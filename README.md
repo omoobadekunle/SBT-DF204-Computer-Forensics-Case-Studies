@@ -44,19 +44,20 @@
 
 This case study involved the investigation of network traffic relating to a harassment complaint made by Lily Tuckrige, a Chemistry teacher. The purpose of the investigation was to examine the supplied packet capture and determine whether the traffic provided enough evidence to connect the harassment message to a particular device and, where possible, to a person on the Chemistry 109 class roster.
 
-The investigation was carried out using Kali Linux and Wireshark. The supplied `nitroba.pcap` file was first checked and preserved before analysis. A working copy was created so that the original evidence would not be used directly during the investigation.
+The investigation was carried out using Kali Linux and Wireshark. The supplied nitroba.pcap file was first checked and preserved before analysis. A working copy was created so that the original evidence would not be used directly during the investigation.
 
-The packet capture showed HTTP traffic from the internal IP address `192.168.15.4` to the web service `www.willselfdestruct.com`. The Ethernet information associated with the traffic showed the MAC address `00:17:f2:e2:c0:ce`.
+The packet capture showed HTTP traffic from the internal IP address 192.168.15.4 to the web service www.willselfdestruct.com. The Ethernet information associated with the traffic showed the MAC address 00:17:f2:e2:c0:ce.
 
 The most important finding was Frame 83601. This packet contained an HTTP POST request to:
 
-`http://www.willselfdestruct.com/secure/submit`
+http://www.willselfdestruct.com/secure/submit
 
-The POST data contained the recipient's email address, the subject of the message, and the actual harassment message. The recipient was `Lilytuckrige@yahoo.com`, the subject was **"you can't find us"**, and the message stated that the recipient should stop teaching and start running.
+The POST data contained the recipient's email address, the subject of the message, and the actual harassment message. The recipient was Lilytuckrige@yahoo.com, the subject was “you can't find us”, and the message stated that the recipient should stop teaching and start running.
 
-Further traffic from the same device contained a Gmail cookie showing `jcoachj@gmail.com`. This account is associated with Johnny Coach, who is included on the Chemistry 109 roster.
+Further traffic from the same device contained a Gmail cookie showing jcoachj@gmail.com. This account is associated with Johnny Coach, who is included on the Chemistry 109 roster.
 
-Based on the evidence examined, the traffic strongly connects the harassment message to the device using `192.168.15.4` and MAC address `00:17:f2:e2:c0:ce`, and the available browser evidence associates that device with `jcoachj@gmail.com`. However, the evidence does not prove with absolute certainty that Johnny Coach was physically operating the device at the exact time of the message. The open wireless network in the residence is an important limitation.
+Based on the evidence examined, the traffic strongly connects the harassment message to the device using 192.168.15.4 and MAC address 00:17:f2:e2:c0:ce, and the available browser evidence associates that device with jcoachj@gmail.com. However, the evidence does not prove with absolute certainty that Johnny Coach was physically operating the device at the exact time of the message. The open wireless network in the residence is an important limitation.
+
 
 ---
 
