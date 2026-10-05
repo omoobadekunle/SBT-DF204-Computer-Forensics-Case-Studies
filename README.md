@@ -2,8 +2,6 @@
 
 ## Investigating Harassment Email Traffic With Wireshark
 
-# Case Study 1 – Individual Forensic Investigation
-
 | **Field** | **Details** |
 |---|---|
 | **Student Name** | Adekunle Ogunyemi |
