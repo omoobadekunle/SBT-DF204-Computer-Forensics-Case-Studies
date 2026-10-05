@@ -282,7 +282,8 @@ This helped confirm that the traffic was related to the type of service describe
 
 **Figure 6: Web page content identifying the secure anonymous email service**
 
-<img width="1455" height="1147" alt="Fig 23" src="https://github.com/user-attachments/assets/1f1aa8b9-890e-4797-829d-d3d2b0a3467e" />
+<img width="1425" height="716" alt="Fig 17" src="https://github.com/user-attachments/assets/3574e044-c09e-4c0c-b8be-3f4f9f3a6fcb" />
+
 
 
 ---
