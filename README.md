@@ -2,13 +2,18 @@
 
 ## Investigating Harassment Email Traffic With Wireshark
 
-**Student Name:** Adekunle Ogunyemi  
-**Course:** SBT-DF204 – Computer Forensics Case Studies  
-**Assessment:** Case Study 1 – Individual Forensic Investigation  
-**Case Title:** Investigating Harassment Email Traffic With Wireshark  
-**Operating System:** Kali Linux  
-**Forensic Tool:** Wireshark  
-**Evidence File:** `nitroba.pcap`
+# Case Study 1 – Individual Forensic Investigation
+
+| **Field** | **Details** |
+|---|---|
+| **Student Name** | Adekunle Ogunyemi |
+| **Course** | SBT-DF204 – Computer Forensics Case Studies |
+| **Assessment** | Case Study 1 – Individual Forensic Investigation |
+| **Case Title** | Investigating Harassment Email Traffic With Wireshark |
+| **Operating System** | Kali Linux |
+| **Forensic Tool** | Wireshark |
+| **Evidence File** | `nitroba.pcap` |
+
 
 ---
 
@@ -129,9 +134,11 @@ The Kali Linux terminal showed the file size as approximately **54 MB**.
 
 **Figure 1: Evidence file `nitroba.pcap` and its recorded file size in Kali Linux**
 
-The screenshot should show the terminal command used to list the evidence file, including the file name and size.
+The screenshot shows the terminal command used to list the evidence file, including the file name and size.
 
-![Figure 1 – Evidence file and file size](evidence/figure-01-evidence-file.png)
+<img width="1686" height="240" alt="Fig 4" src="https://github.com/user-attachments/assets/d36ad307-4dba-4b11-bf7d-4181b5150353" />
+
+
 
 ---
 
@@ -153,14 +160,9 @@ This shows that the working copy was not changed during the copying process.
 
 **Figure 2: SHA-256 comparison of the original evidence file and the working copy**
 
-The screenshot should clearly show both:
+<img width="1668" height="381" alt="Fig 8" src="https://github.com/user-attachments/assets/4fba45e4-4cb9-4eb3-9f6a-2b1fe687f5fe" />
 
-- `evidence/nitroba.pcap`
-- `working/nitroba_working.pcap`
 
-and their matching SHA-256 values.
-
-![Figure 2 – SHA-256 comparison](evidence/figure-02-sha256-verification.png)
 
 ---
 
@@ -182,9 +184,8 @@ wireshark working/nitroba_working.pcap
 
 **Figure 3: Opening the preserved working copy in Wireshark**
 
-The screenshot should show Wireshark with `nitroba_working.pcap` loaded.
+<img width="1901" height="1195" alt="Screenshot 2026-10-05 114141" src="https://github.com/user-attachments/assets/7b9ef090-4496-4946-a5e0-c3badc7b7e14" />
 
-![Figure 3 – Working copy in Wireshark](evidence/figure-03-working-pcap-wireshark.png)
 
 ---
 
@@ -236,9 +237,8 @@ This showed that the client at `192.168.15.4` was communicating with the web ser
 
 **Figure 4: HTTP requests from 192.168.15.4 to the willselfdestruct.com web service**
 
-The screenshot should show the Wireshark filter and the HTTP requests to `69.25.94.22`.
+<img width="1661" height="926" alt="Fig 10" src="https://github.com/user-attachments/assets/6f8d6251-fdcc-4e48-920b-98f374a54637" />
 
-![Figure 4 – HTTP requests to willselfdestruct.com](evidence/figure-04-willselfdestruct-http.png)
 
 ---
 
@@ -262,13 +262,9 @@ However, the MAC address does not identify the person who was physically using t
 
 **Figure 5: Ethernet and IP details showing the MAC address and client IP**
 
-The screenshot should show the Ethernet II section and the IPv4 section of the packet details, including:
+<img width="1431" height="1028" alt="Fig 22" src="https://github.com/user-attachments/assets/1e34e529-453d-49fb-b898-b7021b27557b" />
 
-- Source MAC: `00:17:f2:e2:c0:ce`
-- Source IP: `192.168.15.4`
-- Destination IP: `69.25.94.22`
 
-![Figure 5 – Client IP and MAC address](evidence/figure-05-client-ip-mac.png)
 
 ---
 
@@ -286,9 +282,8 @@ This helped confirm that the traffic was related to the type of service describe
 
 **Figure 6: Web page content identifying the secure anonymous email service**
 
-The screenshot should show the Wireshark packet containing the HTTP response and the page content referring to secure anonymous email.
+<img width="1455" height="1147" alt="Fig 23" src="https://github.com/user-attachments/assets/1f1aa8b9-890e-4797-829d-d3d2b0a3467e" />
 
-![Figure 6 – Anonymous email service page content](evidence/figure-06-anonymous-email-service.png)
 
 ---
 
@@ -334,20 +329,9 @@ This was direct evidence that the client generated an HTTP request containing th
 
 **Figure 7: Frame 83601 showing the HTTP POST containing the harassment message**
 
-This is one of the most important screenshots in the report.
+<img width="1455" height="1147" alt="Fig 23" src="https://github.com/user-attachments/assets/dca1abe2-7c6f-4c39-b4a1-0c5d2ec54f6e" />
 
-The screenshot should clearly show:
 
-- Frame 83601
-- Source IP `192.168.15.4`
-- Destination IP `69.25.94.22`
-- Source MAC `00:17:f2:e2:c0:ce`
-- `POST /secure/submit`
-- Recipient `Lilytuckrige@yahoo.com`
-- Subject `you can't find us`
-- Message content
-
-![Figure 7 – Frame 83601 harassment POST](evidence/figure-07-frame-83601.png)
 
 ---
 
@@ -369,9 +353,9 @@ The contents of these fields are important because they show that the packet was
 
 **Figure 8: HTTP form fields extracted from Frame 83601**
 
-The screenshot should focus on the **HTML Form URL Encoded** section of the packet.
+<img width="1081" height="957" alt="Fig 14" src="https://github.com/user-attachments/assets/9146dfc8-816f-45b2-9692-346ae5283354" />
 
-![Figure 8 – HTTP form data](evidence/figure-08-http-form-data.png)
+
 
 ---
 
@@ -401,9 +385,9 @@ This traffic was important because it showed that the same client was also using
 
 **Figure 9: HTTP POST to sendanonymousemail.net containing an earlier message to Lily Tuckrige**
 
-The screenshot should show the HTTP POST and the form fields containing the recipient, sender, subject and message.
+<img width="1081" height="957" alt="Fig 14" src="https://github.com/user-attachments/assets/4ee3a509-eb1a-4473-ac86-bd2aad378dd8" />
 
-![Figure 9 – Earlier anonymous email POST](evidence/figure-09-earlier-anonymous-email.png)
+
 
 ---
 
@@ -437,15 +421,9 @@ This provided evidence associating the device with the Gmail account:
 
 **Figure 10: Gmail cookie showing the account `jcoachj@gmail.com` on the investigated device**
 
-The screenshot should clearly show:
+<img width="1437" height="1162" alt="Fig 25" src="https://github.com/user-attachments/assets/b28de711-b6d7-431d-b439-90308deda68b" />
 
-- Source IP `192.168.15.4`
-- Source MAC `00:17:f2:e2:c0:ce`
-- Host `mail.google.com`
-- `gmailchat=jcoachj@gmail.com`
-- The browser user-agent
 
-![Figure 10 – Gmail cookie](evidence/figure-10-gmail-cookie.png)
 
 ---
 
@@ -481,9 +459,8 @@ This does not mean that the IP address itself proves that Johnny Coach sent the 
 
 **Figure 11: Chemistry 109 roster showing Johnny Coach**
 
-The screenshot should show the section of the supplied roster containing **Johnny Coach**.
+<img width="1197" height="602" alt="Screenshot 2026-10-05 120417" src="https://github.com/user-attachments/assets/09e3ca98-5f12-4957-8b29-6e294e219fff" />
 
-![Figure 11 – Chemistry 109 roster](evidence/figure-11-chem109-roster.png)
 
 ---
 
@@ -505,9 +482,8 @@ The packet capture timestamps should be reported exactly as displayed in Wiresha
 
 **Figure 12: Wireshark timeline showing the relevant HTTP activity surrounding the harassment submission**
 
-The screenshot should show the sequence of packets around Frame 83601.
+<img width="1886" height="966" alt="Fig 24" src="https://github.com/user-attachments/assets/babdfbd6-2334-4a52-8733-21936051df1f" />
 
-![Figure 12 – Packet timeline](evidence/figure-12-packet-timeline.png)
 
 ---
 
@@ -671,6 +647,9 @@ SBT-DF204-Case-Study-01/
 ├── README.md
 │
 ├── evidence/
+│   ├── nitroba.pcap
+│
+├── screenshots/
 │   ├── figure-01-evidence-file.png
 │   ├── figure-02-sha256-verification.png
 │   ├── figure-03-working-pcap-wireshark.png
@@ -685,10 +664,15 @@ SBT-DF204-Case-Study-01/
 │   └── figure-12-packet-timeline.png
 │
 ├── report/
-│   └── forensic-report.pdf
+│   └── file_compared_sha256  
+│   └── file_info.txt
+│   └── nitroba_pcap_sha256  
+│   └── nitroba_pcap_stat
 │
-└── pcap/
-    └── nitroba.pcap
+└── working/
+    └── client_system.pcap
+    └── nitroba_working.pcap  
+    
 ```
 
 > **Note:** Do not upload passwords, private credentials, API keys, or other sensitive information to a public repository.
@@ -705,10 +689,8 @@ The evidence therefore provides a strong association between Johnny Coach and th
 
 ---
 
-## Author
+## Author  
 
-**Adekunle Ogunyemi**
-
-**SBT-DF204 – Computer Forensics Case Studies**
-
+**Adekunle Ogunyemi**  
+**SBT-DF204 – Computer Forensics Case Studies**  
 **Case Study 1 – Investigating Harassment Email Traffic With Wireshark**
